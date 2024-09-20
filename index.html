@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <a href="#"><img src="assets/logo.png" alt="logo" class="logo"></a>
+            <ul>
+                <li><a href="#">Mac</a></li>
+                <li><a href="#">iPad</a></li>
+                <li><a href="#">iPhone</a></li>
+                <li><a href="#">Watch</a></li>
+                <li><a href="#">Air Pods</a></li>
+                <li><a href="#">Só na Apple</a></li>
+                <li><a href="#">Suporte</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="circle"></div>
+            <div class="main-text">
+                <img src="assets/iphone13.png" alt="">
+                <h3>Seu novo superpoder!</h3>
+                <p>Chip com velocidade impressionante. Um aumento notável na duração da bateria. E novos recursos de foto e vídeo.<br>
+                No iphone 13 você faz coisas que nunca pôde. E ele ainda vem em dois tamanhos.
+                </p>
+                <h6>A partir de R$6999</h6>
+                <a href="#" class="btn">Comprar</a>
+                <div class="text-color">
+                    <h5>Escolha a sua cor favorita:</h5>
+                </div>
+                <div class="content">
+                    <span id="green" onclick="imgSlider('assets/green.png'); cicleChange('#445c42')"></span>
+                    <span id="pink" onclick="imgSlider('assets/pink.png'); cicleChange('#ffc9cf')"></span>
+                    <span id="blue" onclick="imgSlider('assets/blue.png'); cicleChange('#0b8396')"></span>
+                    <span id="black" onclick="imgSlider('assets/black.png'); cicleChange('#092732')"></span>
+                    <span id="white" onclick="imgSlider('assets/white.png'); cicleChange('#e0dbd7')"></span>
+                    <span id="red" onclick="imgSlider('assets/red.png'); cicleChange('#cf4f68')"></span>
+                </div>
+            </div>
+            <div class="main-img">
+                <img src="assets/green.png" alt="" id="phone">
+
+            </div>
+
+        </section>
+    </main>
+
+    <script type="text/javascript">
+        function imgSlider(e){
+            document.querySelector('#phone').src = e;
+        }
+
+        function cicleChange(color){
+           const circle = document.querySelector('.circle');
+           circle.style.background = color;
+        }
+    </script>
+</body>
+</html>
